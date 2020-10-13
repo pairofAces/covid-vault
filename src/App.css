@@ -12,6 +12,10 @@ body {
   padding: 20px;
 }
 
+.app_dropdown {
+  background-color: white;
+}
+
 .app_header > h1 {
   color: #870000;
   font-size: 2rem;
@@ -31,6 +35,21 @@ body {
 .app_stats {
   display: flex;
   justify-content: space-between;
+}
+
+.app_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.app_right .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app_graph {
+  flex-grow: 1;
 }
 
 @media (max-width: 990px) {
