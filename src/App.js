@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState('worldwide');
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -25,24 +26,25 @@ function App() {
     getCountriesData();
   }, [])
 
+  const onCountryChange = async(e) => {
+    const countryCode = e.target.value
+
+    console.log(countryCode)
+
+    setCountry(countryCode);
+  }
+
   return (
     <div className="app">
       <div className="app_header">
         <h1>Covid-19 TRACKER</h1>
         <FormControl className="app_dropdown">
-          <Select variant="outlined" value="abc">
-            {/* What I want is to make a dropdown that will
-            show the countries as options */}
-            {
-              countries.map(country => (
+          <Select variant="outlined" value={country} onChange={onCountryChange}>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            {countries.map(country => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
               ))
             }
-
-            {/* <MenuItem value="worldwide">Worldwide</MenuItem>
-            <MenuItem value="worldwide">Option 2</MenuItem>
-            <MenuItem value="worldwide">Option 3</MenuItem>
-            <MenuItem value="worldwide">Wazzappp</MenuItem> */}
           </Select> 
         </FormControl>
       </div>
