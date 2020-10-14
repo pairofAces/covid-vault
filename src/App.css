@@ -1,13 +1,19 @@
 .app {
     text-align: center;
+    width: 100%;
 }
 
 nav {
+    /* position: fixed; */
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: rgba(1, 181, 236, 0.856);
+    background: rgba(0, 0, 0, 0.856);
     color: white; 
 }
 
@@ -17,4 +23,23 @@ nav {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+}
+
+.top-nav-icon {
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes top-nav-icon-spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .top-nav-icon {
+        animation: top-nav-icon-spin infinite 20s linear;
+    }
 }
