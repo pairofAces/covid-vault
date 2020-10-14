@@ -18,7 +18,7 @@ function Tracker() {
     lat: 34.80746,
     lng: -40.4796
   });
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapZoom, setMapZoom] = useState(4);
   const [mapCountries, setMapCountries] = useState([]);
   const [casesType, setCasesType] = useState("cases");
 

@@ -10,14 +10,15 @@ function Nav() {
                 {/* put an img tag here */}
                 <img src={img} className="top-nav-icon" alt="icon"/>
             </Link>
-            <ul className="nav-links">
+            <div className="nav-links">
                 <Link to='/about' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
                     <li>About</li>
                 </Link>
                 <Link to='/tracker' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
                     <li>Tracker</li>
                 </Link>
-            </ul>
+            </div>
+           
         </nav>
     )
 }
