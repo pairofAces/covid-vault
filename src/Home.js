@@ -8,9 +8,11 @@ function Home() {
     // document.body.style.backgroundImage = `url(${space})`;
 
      return (
-        <div >
-            <h1>This is the Home Page</h1>
+        <div className="pulse">
+            {/* <h1>This is the Home Page</h1> */}
             {/* <ReactGlobe/> */}
+            <span></span>
+            <span></span>
         </div>
     )
 }
