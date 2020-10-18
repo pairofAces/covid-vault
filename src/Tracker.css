@@ -3,13 +3,14 @@
 }
 
 body {
-  background-color: #f5f6fa;
+  background-color: #f5f6fa !important;
 }
 
-.app {
+.app_tracker {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
+  background-color: #f5f6fa !important;
 }
 
 .app_dropdown {

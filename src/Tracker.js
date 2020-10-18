@@ -72,7 +72,7 @@ function Tracker() {
   }
 
   return (
-    <div className="app">
+    <div className="app_tracker">
       <div className="app_left">
         <div className="app_header">
           <h1>Covid-19 TRACKER</h1>
