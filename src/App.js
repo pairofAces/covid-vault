@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
-import Nav from './Nav';
+import Nav from './Components/Nav';
 import Home from './Components/Home';
-import About from './About';
-import Tracker from './Tracker';
+import About from './Components/About';
+import Tracker from './Components/Tracker';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGlobe from 'react-globe';
 

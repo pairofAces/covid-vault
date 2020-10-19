@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import { Link } from 'react-router-dom';
-import img from './Images/covid-19.png';
+import img from '../Images/covid-19.png';
 
 function Nav() {
     return (
