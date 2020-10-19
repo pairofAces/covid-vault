@@ -3,7 +3,7 @@ import './App.css'
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import About from './Components/About';
-import Tracker from './Components/Tracker';
+import Tracker from './Components/Tracker/Tracker';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGlobe from 'react-globe';
 
