@@ -75,7 +75,7 @@ function Tracker() {
     <div className="app_tracker">
       <div className="app_left">
         <div className="app_header">
-          <h1>Covid-19 TRACKER</h1>
+          <h1>COVID TRACKER</h1>
           <FormControl className="app_dropdown">
             <Select variant="outlined" value={country} onChange={onCountryChange}>
               <MenuItem value="worldwide">Worldwide</MenuItem>
@@ -88,7 +88,7 @@ function Tracker() {
         </div>
 
         <div className="app_stats">
-          <InfoBox active={casesType === "cases"} onClick={e => setCasesType('cases')} title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)}/>
+          <InfoBox active={casesType === "cases"} onClick={e => setCasesType('cases')} title="Active Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)}/>
 
           <InfoBox active={casesType === "recovered"} onClick={e => setCasesType('recovered')} title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)}/>
 
