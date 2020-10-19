@@ -2,7 +2,7 @@
     text-align: center;
     width: 100%;
     height: 100vh;
-    background: url(space-hd-png.png);
+    background: url(Images/space-hd-png.png);
     background-size: cover;
     animation: animatebg 60s linear infinite;
  
@@ -16,7 +16,7 @@
     width: 350px;
     /* height: 100vh; */
     height: 350px;
-    background: url(earth.png);
+    background: url(Images/earth.png);
     background-size: cover;
     animation: animateEarth 12s linear infinite;
     border-radius: 50%;
