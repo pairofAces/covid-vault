@@ -17,6 +17,9 @@ function Nav() {
                 <Link to='/tracker' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
                     <li>Tracker</li>
                 </Link>
+                <Link to='/graph' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
+                    <li>Graph</li>
+                </Link>
             </div>
            
         </nav>

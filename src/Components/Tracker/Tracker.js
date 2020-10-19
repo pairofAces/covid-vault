@@ -98,14 +98,14 @@ function Tracker() {
 
         <Map casesType={casesType} countries={mapCountries} center={mapCenter} zoom={mapZoom}/>
       </div>
-      <Card className="app_right">
+      {/* <Card className="app_right">
         <CardContent>
           <h3>Live Cases by Country</h3>
           <Table countries={tableData} />
           <h3>Worldwide new {casesType}</h3>
           <LineGraph className="app_graph" casesType={casesType}/>
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 }

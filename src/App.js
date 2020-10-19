@@ -4,6 +4,7 @@ import Nav from './Components/Nav';
 import Home from './Components/Home';
 import About from './Components/About';
 import Tracker from './Components/Tracker/Tracker';
+import Graph from './Components/Graph';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGlobe from 'react-globe';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/tracker" component={Tracker}/>
+          <Route path="/graph" component={Graph}/>
         </Switch>
         
       </div>

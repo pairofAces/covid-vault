@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import About from './About';
 import Tracker from './Tracker';
+import Graph from './Graph';
 import { Route } from 'react-router-dom';
 
 const Router = () => {
@@ -12,6 +13,9 @@ const Router = () => {
             </Route>
             <Route path="/tracker">
                 <Tracker/>
+            </Route>
+            <Route path="/graph">
+                <Graph/>
             </Route>
         </div>
     )
