@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import  Form  from './form';
 
 function SignUp(props) {
-  const [firstName, setFirstName] = useState('');
+  const [username, setUsername] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const isInvalid = firstName === '' || password === '' || emailAddress === '';
+  const isInvalid = username === '' || password === '' || emailAddress === '';
 
   const submitHandler = (e) => {
-    let user = { email: emailAddress, password: password };
+    let user = { username: username, password: password, email: emailAddress };
     e.preventDefault();
     props.signUpHandler(user);
   };
@@ -23,9 +23,9 @@ function SignUp(props) {
 
           <Form.Base onSubmit={submitHandler} method='POST'>
             <Form.Input
-              placeholder='First Name'
-              value={firstName}
-              onChange={({ target }) => setFirstName(target.value)}
+              placeholder='Username'
+              value={username}
+              onChange={({ target }) => setUsername(target.value)}
             />
             <Form.Input
               placeholder='Email Address'
@@ -45,13 +45,8 @@ function SignUp(props) {
             </Form.Submit>
 
             <Form.Text>
-              Already a user? <Form.Link to='/signin'>Sign in now.</Form.Link>
+              Already a user? <Form.Link to='/login'>Sign in now.</Form.Link>
             </Form.Text>
-
-            <Form.TextSmall>
-              This page is protected by Google reCAPTCHA to ensure you're not a
-              bot. Learn more.
-            </Form.TextSmall>
           </Form.Base>
         </Form>
     </>

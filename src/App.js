@@ -20,6 +20,7 @@ import history from './history';
 class App extends Component { 
   state = {
     user: null,
+    loggedIn: false
   };
 
   componentDidMount() {
@@ -88,19 +89,21 @@ class App extends Component {
         this.setState(
           () => ({
             user: data.user,
+            loggedIn: true
           }),
           () => history.push(ROUTES.GRAPH)
         );
       });
+      console.log("state:", this.state)
   };
   
   render() {
 
-    const { user } = this.state;
+    const { user, loggedIn } = this.state;
     return (
       <Router history={history}>
           <div>
-            <Nav/>
+            <Nav loggedIn={loggedIn}/>
           </div>
         <div className="app">
           <Switch>
@@ -114,25 +117,29 @@ class App extends Component {
             loggedInPath={ROUTES.GRAPH}
             path={ROUTES.SIGN_IN}
             exact>
-            <SignIn signInHandler={this.signInHandler} />
+              <SignIn signInHandler={this.signInHandler} />
             </IsUserRedirect>
+
             <IsUserRedirect
             user={user}
-            loggedInPath={ROUTES.GRAPH}
+            loggedInPath={ROUTES.SIGN_IN}
             path={ROUTES.SIGN_UP}
             exact>
-            <SignUp signUpHandler={this.signUpHandler} />
+              <SignUp signUpHandler={this.signUpHandler} />
             </IsUserRedirect>
+
             <ProtectedRoute user={user} path={ROUTES.GRAPH} exact>
-            <Graph user={user} />
+              <Graph user={user} />
             </ProtectedRoute>
+
             <IsUserRedirect
             user={user}
             loggedInPath={ROUTES.GRAPH}
             path={ROUTES.HOME}
             exact>
-            <Home />
+              <Home />
             </IsUserRedirect>
+
           </Switch>
           
         </div>
