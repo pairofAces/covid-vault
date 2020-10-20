@@ -11,6 +11,12 @@ function Nav() {
                 <img src={img} className="top-nav-icon" alt="icon"/>
             </Link>
             <div className="nav-links">
+                <Link to='/signup' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
+                    <li>Sign Up</li>
+                </Link>
+                <Link to='/login' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
+                    <li>Login</li>
+                </Link>
                 <Link to='/about' style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
                     <li>About</li>
                 </Link>
