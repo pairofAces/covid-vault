@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem, FormControl, Select, Card, CardContent } from "@material-ui/core";
-import InfoBox from '../Components/InfoBox/InfoBox.js';
-import Table from '../Components/Table/Table.js';
+import InfoBox from './InfoBox/InfoBox.js';
+import Table from './Table/Table.js';
 import LineGraph from './LineGraph';
 import { sortData, prettyPrintStat } from './util';
 
