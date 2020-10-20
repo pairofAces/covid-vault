@@ -5,7 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Tracker from './components/Tracker/Tracker';
 import Graph from './components/Graph';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // import { SignIn, SignUp } from 'src/Components/viewpages';
 import SignIn from './signin.js';
@@ -94,7 +94,11 @@ class App extends Component {
           () => history.push(ROUTES.GRAPH)
         );
       });
-      console.log("state:", this.state)
+      // console.log("state:", this.state)
+      return (
+
+        <Link to="/graph"/>
+      )
   };
   
   render() {

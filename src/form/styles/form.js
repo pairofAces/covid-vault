@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 660px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(186, 167, 189, 0);
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -74,7 +74,7 @@ export const Input = styled.input`
 `;
 
 export const Submit = styled.button`
-  background: #e50914;
+  background: #BA68C8;
   border-radius: 4px;
   font-size: 16px;
   font-weight: bold;

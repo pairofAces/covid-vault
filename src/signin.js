@@ -37,11 +37,14 @@ function SignIn(props) {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            {/* <Link to='/graph'> */}
               <Form.Submit disabled={isInvalid} type='submit'>
-                Sign In
+                {/* <Link to='/graph'>
+                </Link> */}
+                  Sign In
               </Form.Submit>
-            {/* </Link> */}
+              {/* <button disabled={isInvalid} type="submit">
+                Sign In
+              </button> */}
           </Form.Base>
         </Form>
     </>
