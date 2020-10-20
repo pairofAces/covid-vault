@@ -7,7 +7,9 @@ import Tracker from './Components/Tracker/Tracker';
 import Graph from './Components/Graph';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { SignIn, SignUp } from './viewpages';
+// import { SignIn, SignUp } from 'src/Components/viewpages';
+import {SignIn} from './signin.js';
+import {SignUp} from './signup.js';
 import * as ROUTES from './constants/routes';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 import baseUrl from './helpers/routes';
