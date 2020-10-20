@@ -1,8 +1,10 @@
 .table {
     margin-top: 20px;
     overflow: scroll;
-    height: 400px;
-    color: #6a5d5d;
+    color: rgb(219, 196, 245);
+    background-color: rgb(50, 49, 51);
+    height: 450px;
+    /* color: #6a5d5d; */
     /* background-color: white; */
 }
 
@@ -15,6 +17,12 @@
     padding: 0.5rem;
 }
 
-.table tr:nth-of-type(odd) {
-    background-color: #f3f2f8;
+.table tr:nth-of-type(odd){
+    color: rgb(14, 1, 36);
+    background-color: rgb(201, 121, 233);
+}
+.flag-info {
+    height: 30%;
+    width: 60%;
+    border-radius: 10%;
 }
