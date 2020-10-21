@@ -40,7 +40,7 @@ function About() {
                                 </li>
                                 <br></br>
                                 <li>
-                                    The graph also shows a line graph with data regarding the additional new deaths per day, over the past 120 days. 
+                                    The graph also shows a line graph with data regarding the additional new active cases, recovered cases, or deaths per day, over the past 120 days. 
                                 </li>
                             </ul>
                         </h3>
