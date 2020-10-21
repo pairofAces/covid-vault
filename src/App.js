@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
-import Nav from './Components/Nav';
-import Home from './Components/Home';
-import About from './Components/About';
-import Tracker from './Components/Tracker/Tracker';
-import Graph from './Components/Graph';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import About from './components/About';
+import Tracker from './components/Tracker/Tracker';
+import Graph from './components/Graph';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactGlobe from 'react-globe';
 
