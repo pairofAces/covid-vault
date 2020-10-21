@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import img from '../Images/covid-19.png';
 
 function Nav({ loggedIn }) {
@@ -23,6 +23,7 @@ function Nav({ loggedIn }) {
                     <Link to='/' onClick={logout} style={{color: "white", textDecoration: "none", fontWeight:"bold"}}>
                         <li>Log Out</li>
                     </Link>
+                    <Redirect from="/" to="/graph"/>
                 </div>
             
             </nav>

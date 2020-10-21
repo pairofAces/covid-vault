@@ -5,10 +5,6 @@ import Home from './components/Home';
 import About from './components/About';
 import Tracker from './components/Tracker/Tracker';
 import Graph from './components/Graph';
-<<<<<<< HEAD
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ReactGlobe from 'react-globe';
-=======
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SignIn from './signin.js';
 import SignUp from './signup.js';
@@ -16,7 +12,6 @@ import * as ROUTES from './constants/routes';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 import baseUrl from './helpers/routes';
 import history from './history';
->>>>>>> login
 
 
 

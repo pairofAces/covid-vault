@@ -7,12 +7,6 @@ function About() {
         <div className="about_header">
             <h1>About Page</h1>
             <br></br>
-<<<<<<< HEAD
-            <br></br>
-            <br></br>
-
-=======
->>>>>>> login
             <div className="row">
                 
                     <div className="card-left">
@@ -43,11 +37,7 @@ function About() {
                                 </li>
                                 <br></br>
                                 <li>
-<<<<<<< HEAD
-                                    The graph also shows a line graph with data regarding the additional new active cases, recovered cases, or deaths per day, over the past 120 days. 
-=======
                                     The graph also shows a line graph with data regarding the additional new deaths per day, over the past 120 days. 
->>>>>>> login
                                 </li>
                             </ul>
                         </h3>
