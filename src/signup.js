@@ -21,7 +21,7 @@ function SignUp(props) {
           <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
 
-          <Form.Base onSubmit={submitHandler} method='POST'>
+          <Form.Base onSubmit={submitHandler} method='POST' loggedIn={props.loggedIn}>
             <Form.Input
               placeholder='Username'
               value={username}

@@ -6,8 +6,6 @@ import About from './components/About';
 import Tracker from './components/Tracker/Tracker';
 import Graph from './components/Graph';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-// import { SignIn, SignUp } from 'src/Components/viewpages';
 import SignIn from './signin.js';
 import SignUp from './signup.js';
 import * as ROUTES from './constants/routes';
@@ -26,7 +24,8 @@ class App extends Component {
   componentDidMount() {
     const token = localStorage.getItem('token');
 
-    if (token) {
+    // if 
+    // (token) {
       fetch(baseUrl.profile, {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },
@@ -37,10 +36,11 @@ class App extends Component {
             user: data.user,
           }))
         );
-    } else {
-      history.push(ROUTES.HOME);
-    }
-  }
+    } 
+    // else {
+    //   history.push(ROUTES.HOME);
+    // }
+  
 
   signUpHandler = (userObj) => {
     fetch(baseUrl.signUp, {
@@ -64,9 +64,14 @@ class App extends Component {
           () => ({
             user: data.user,
           }),
-          () => history.push(ROUTES.GRAPH)
+          () => history.push("/login")
+          
         );
       });
+    // return (
+
+    //     <Link to="/login"/>
+    //   )
   };
 
   signInHandler = (userObj) => {
@@ -95,17 +100,19 @@ class App extends Component {
         );
       });
       // console.log("state:", this.state)
-      return (
+      // return (
 
-        <Link to="/graph"/>
-      )
+      //   <Link to="/graph"/>
+      // )
   };
   
   render() {
 
-    const { user, loggedIn } = this.state;
+    const user = this.state.user;
+    const loggedIn = this.state.loggedIn;
+
     return (
-      <Router history={history}>
+      <Router >
           <div>
             <Nav loggedIn={loggedIn}/>
           </div>
@@ -118,10 +125,10 @@ class App extends Component {
           
             <IsUserRedirect
             user={user}
-            loggedInPath={ROUTES.GRAPH}
+            loggedInPath={ROUTES.HOME}
             path={ROUTES.SIGN_IN}
             exact>
-              <SignIn signInHandler={this.signInHandler} />
+              <SignIn signInHandler={this.signInHandler} loggedIn={loggedIn} />
             </IsUserRedirect>
 
             <IsUserRedirect
@@ -129,19 +136,19 @@ class App extends Component {
             loggedInPath={ROUTES.SIGN_IN}
             path={ROUTES.SIGN_UP}
             exact>
-              <SignUp signUpHandler={this.signUpHandler} />
+              <SignUp signUpHandler={this.signUpHandler} loggedIn={loggedIn} />
             </IsUserRedirect>
 
-            <ProtectedRoute user={user} path={ROUTES.GRAPH} exact>
-              <Graph user={user} />
-            </ProtectedRoute>
+            {/* <ProtectedRoute user={user} path={ROUTES.HOME} exact>
+              <Home user={user} />
+            </ProtectedRoute> */}
 
             <IsUserRedirect
             user={user}
-            loggedInPath={ROUTES.GRAPH}
+            loggedInPath={ROUTES.ABOUT}
             path={ROUTES.HOME}
             exact>
-              <Home />
+              <About />
             </IsUserRedirect>
 
           </Switch>
