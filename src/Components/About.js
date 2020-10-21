@@ -7,6 +7,9 @@ function About() {
         <div className="about_header">
             <h1>About Page</h1>
             <br></br>
+            <br></br>
+            <br></br>
+
             <div className="row">
                 
                     <div className="card-left">
