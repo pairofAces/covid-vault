@@ -9,7 +9,7 @@ function Home() {
      return (
          <div className="home-column">
             <div className="title">
-                <img src={img} alt="title"/>
+                <img className="image" src={img} alt="title"/>
             </div>
 
             <Link to="/tracker"> 
