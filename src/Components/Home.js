@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img from '../Images/CovidVault.png';
 
 
 function Home() {
 
     
      return (
-         <Link to="/tracker"> 
-            <div className="pulse">
-                <span></span>
-                <span></span>
+         <div className="home-column">
+            <div className="title">
+                <img src={img} alt="title"/>
             </div>
-         </Link>
+
+            <Link to="/tracker"> 
+                <div className="pulse">
+                    <span></span>
+                    <span></span>
+                </div>
+            </Link>
+         </div>
     )
 }
 

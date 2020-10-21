@@ -8,6 +8,15 @@
  
 }
 
+.home-column {
+    display: block;
+}
+
+.title {
+    position: relative;
+    bottom: 20px;
+}
+
 .about_header {
     position: center;
     color: white;
@@ -36,7 +45,7 @@
 
 .pulse {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
