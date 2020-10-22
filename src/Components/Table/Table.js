@@ -9,11 +9,11 @@ class Table extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("props:", props)
+
         this.state = {
             tableData: []
         }
-        // console.log("state:", this.state)
+        
     }
 
     
@@ -26,9 +26,25 @@ class Table extends React.Component {
         data.forEach((entry) => {
           entry.favorite = false;
         })
+
+        if (!localStorage.getItem('favorites')) {
+            let favorites = [];
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+        
+        const favorites = JSON.parse(localStorage.getItem('favorites'))
+        
+        favorites.forEach((favorite) => {
+            data.forEach((country) => {
+                
+                if (favorite === country.country) {
+                    country.favorite = true;
+                }
+            })
+        })
         const tableData = sortData(data);
-        console.log("table data:", tableData);
-        this.setState({tableData});
+        this.setState({tableData})
+
       })
     }
     
@@ -40,13 +56,16 @@ class Table extends React.Component {
     setAsFav = (country) => {
         
         return () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites'))
+            favorites.push(country)
+
+            localStorage.setItem('favorites', JSON.stringify(favorites))
+            
             let { tableData } = this.state
-            console.log("going to set as fav:", country)
-            console.log("set as favorite countries:", tableData)
             tableData.forEach((item) => {
               // console.log("item:", item, "country:", country)
                 if (item.country === country) {
-                    console.log("item:", item)
+                    
                     item.favorite = !item.favorite
                 } 
             })
@@ -58,7 +77,7 @@ class Table extends React.Component {
     
     render() {
         const {tableData} = this.state
-        console.log("countries:", tableData)
+        
         return (
             <div className="table">
                 {tableData.map(({ country, cases, countryInfo, favorite }) => (
