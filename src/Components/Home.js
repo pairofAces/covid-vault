@@ -8,10 +8,11 @@ function Home() {
     
      return (
          <div className="home-column">
+             
             <div className="title">
                 <img className="image" src={img} alt="title"/>
             </div>
-
+            <br></br>
             <Link to="/tracker"> 
                 <div className="pulse">
                     <span></span>

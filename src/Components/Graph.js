@@ -6,16 +6,16 @@ import LineGraph from './LineGraph';
 import { sortData, prettyPrintStat } from './util';
 
 export default function Graph() {
-    const [countries, setCountries] = useState([]);
-    const [country, setCountry] = useState('worldwide');
+    // const [countries, setCountries] = useState([]);
+    // const [country, setCountry] = useState('worldwide');
     const [countryInfo, setCountryInfo] = useState({});
-    const [tableData, setTableData] = useState([]);
-    const [mapCenter, setMapCenter] = useState({
-        lat: 34.80746,
-        lng: -40.4796
-    });
-    const [mapZoom, setMapZoom] = useState(4);
-    const [mapCountries, setMapCountries] = useState([]);
+    // const [tableData, setTableData] = useState([]);
+    // const [mapCenter, setMapCenter] = useState({
+    //     lat: 34.80746,
+    //     lng: -40.4796
+    // });
+    // const [mapZoom, setMapZoom] = useState(4);
+    // const [mapCountries, setMapCountries] = useState([]);
     const [casesType, setCasesType] = useState("cases");
 
 
@@ -27,48 +27,11 @@ export default function Graph() {
     })
   }, [])
 
-  useEffect(() => {
-    const getCountriesData = async () => {
-      await fetch("https://disease.sh/v3/covid-19/countries")
-      .then(response => response.json())
-      .then(data => {
-        const countries = data.map(country => ({
-          name: country.country,
-          value: country.countryInfo.iso2
-        }));
+ 
 
-        const sortedData = sortData(data);
-        setTableData(sortedData);
-        setMapCountries(data);
-        setCountries(countries);
-      })
-    }
-    getCountriesData();
-  }, [])
+  
 
-  const onCountryChange = async (e) => {
-    const countryCode = e.target.value
-    setCountry(countryCode);
-
-    const url = countryCode === 'worldwide' 
-      ? 'https://disease.sh/v3/covid-19/all' 
-      : `https://disease.sh/v3/covid-19/countries/${countryCode}`
-    await fetch(url)
-    .then(resp => resp.json())
-    .then(data => {
-      setCountry(countryCode); 
-      setCountryInfo(data);
-
-      // setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-      // setMapZoom(4);
-      countryCode === "worldwide"
-          ? 
-          setMapCenter([34.80746, -40.4796])
-          : setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-    })
-  }
-
-  return (
+   return (
       <div>
 
             <div className="app_stats">
@@ -82,7 +45,7 @@ export default function Graph() {
             <Card className="app_right">
                 <CardContent>
                     <h3>Live Cases by Country</h3>
-                <Table countries={tableData} />
+                <Table />
                     <h3>Worldwide new {casesType}</h3>
                 <LineGraph className="app_graph" casesType={casesType}/>
                 </CardContent>

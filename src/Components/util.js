@@ -26,7 +26,9 @@ const casesTypeColors = {
 export const sortData = (data) => {
   let sortedData = [...data];
   sortedData.sort((a, b) => {
-    if (a.cases > b.cases) {
+    if ((a.favorite && b.favorite) || (!a.favorite && !b.favorite)) {
+      return b.cases - a.cases;
+    } else if (a.favorite) {
       return -1;
     } else {
       return 1;
