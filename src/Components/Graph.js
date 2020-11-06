@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, FormControl, Select, Card, CardContent } from "@material-ui/core";
+import { Card, CardContent } from "@material-ui/core";
 import InfoBox from '../components/InfoBox/InfoBox.js';
 import Table from '../components/Table/Table.js';
 import LineGraph from './LineGraph';
-import { sortData, prettyPrintStat } from './util';
+import { prettyPrintStat } from './util';
 
 export default function Graph() {
-    // const [countries, setCountries] = useState([]);
-    // const [country, setCountry] = useState('worldwide');
     const [countryInfo, setCountryInfo] = useState({});
-    // const [tableData, setTableData] = useState([]);
-    // const [mapCenter, setMapCenter] = useState({
-    //     lat: 34.80746,
-    //     lng: -40.4796
-    // });
-    // const [mapZoom, setMapZoom] = useState(4);
-    // const [mapCountries, setMapCountries] = useState([]);
     const [casesType, setCasesType] = useState("cases");
 
 
