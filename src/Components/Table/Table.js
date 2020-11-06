@@ -63,7 +63,6 @@ class Table extends React.Component {
             
             let { tableData } = this.state
             tableData.forEach((item) => {
-              // console.log("item:", item, "country:", country)
                 if (item.country === country) {
                     
                     item.favorite = !item.favorite

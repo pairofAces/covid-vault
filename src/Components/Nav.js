@@ -7,7 +7,6 @@ function Nav() {
     return (
         <nav>
             <Link to='/'>
-                {/* put an img tag here */}
                 <img src={img} className="top-nav-icon" alt="icon"/>
             </Link>
             <div className="nav-links">

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, FormControl, Select, Card, CardContent } from "@material-ui/core";
+import { MenuItem, FormControl, Select } from "@material-ui/core";
 import './Tracker.css';
 import InfoBox from '../InfoBox/InfoBox';
 import Map from '../Map/Map';
-import Table from '../Table/Table';
-import LineGraph from '../LineGraph';
 import { sortData, prettyPrintStat } from '../util';
 import "leaflet/dist/leaflet.css";
 
@@ -63,8 +61,6 @@ function Tracker() {
       setCountry(countryCode); 
       setCountryInfo(data);
 
-      // setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-      // setMapZoom(4);
       countryCode === "worldwide"
           ? 
           setMapCenter([34.80746, -40.4796])
@@ -98,14 +94,6 @@ function Tracker() {
 
         <Map casesType={casesType} countries={mapCountries} center={mapCenter} zoom={mapZoom}/>
       </div>
-      {/* <Card className="app_right">
-        <CardContent>
-          <h3>Live Cases by Country</h3>
-          <Table countries={tableData} />
-          <h3>Worldwide new {casesType}</h3>
-          <LineGraph className="app_graph" casesType={casesType}/>
-        </CardContent>
-      </Card> */}
     </div>
   );
 }
