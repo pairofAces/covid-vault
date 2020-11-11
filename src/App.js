@@ -24,8 +24,7 @@ class App extends Component {
   componentDidMount() {
     const token = localStorage.getItem('token');
 
-    // if 
-    // (token) {
+    
       fetch(baseUrl.profile, {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },
@@ -37,9 +36,6 @@ class App extends Component {
           }))
         );
     } 
-    // else {
-    //   history.push(ROUTES.HOME);
-    // }
   
 
   signUpHandler = (userObj) => {
