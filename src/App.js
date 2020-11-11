@@ -64,10 +64,6 @@ class App extends Component {
           
         );
       });
-    // return (
-
-    //     <Link to="/login"/>
-    //   )
   };
 
   signInHandler = (userObj) => {

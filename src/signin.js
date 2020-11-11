@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import  Form  from './form';
-import { Link } from 'react-router-dom'; 
-import Graph from './components/Graph';
+
 
 function SignIn(props) {
-  // const [emailAddress, setEmailAddress] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,7 +13,6 @@ function SignIn(props) {
     let user = { username: username, password: password };
     e.preventDefault();
     props.signInHandler(user);
-    // props.loggedIn = true;
   };
 
   return (
