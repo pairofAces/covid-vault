@@ -91,11 +91,7 @@ class App extends Component {
           () => history.push(ROUTES.GRAPH)
         );
       });
-      // console.log("state:", this.state)
-      // return (
-
-      //   <Link to="/graph"/>
-      // )
+      
   };
   
   render() {
