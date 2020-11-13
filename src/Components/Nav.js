@@ -6,7 +6,7 @@ import img from '../Images/covid-19.png';
 function Nav() {
     return (
         <nav>
-            <Link to='/'>
+            <Link to='/covid-vault'>
                 <img src={img} className="top-nav-icon" alt="icon"/>
             </Link>
             <div className="nav-links">
