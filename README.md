@@ -4,7 +4,7 @@ A web application engineered to display Covid-19 statistics coming from the Nove
 # Demo
 ![Covid-Vault-Demo](https://media.giphy.com/media/kMZA1QLNj9GmSers1t/giphy.gif)
 
-# User Experience Guid
+# User Experience Guide
 <p>
     Users can use this application on their own accord or refer to the user guide below.
 </p>
