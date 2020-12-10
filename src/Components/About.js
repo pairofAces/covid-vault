@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
-import img from '../Images/me.jpg';
+// import img from '../Images/me.jpg';
+import newPic from '../Images/linkedin.jpg'
 
 function About() {
     return (
