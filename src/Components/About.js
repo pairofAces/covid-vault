@@ -1,6 +1,5 @@
 import React from 'react'
 import '../App.css'
-// import img from '../Images/me.jpg';
 import newPic from '../Images/linkedin.jpg'
 
 function About() {
@@ -14,7 +13,7 @@ function About() {
             <div className="row">
                 
                     <div className="card-left">
-                        <img src={img} alt="karan" />
+                        <img src={newPic} alt="karan" />
                     </div>
                 
                     <div className="card-right">
