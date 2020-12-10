@@ -24,14 +24,22 @@
     color: white;
 }
 
+/* .pic_container {
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 20px;
+  width: 500px;
+  height: 600px;
+} */
+
 .card-left {
   display: flex;
   /* width: 33.3%; */
-  width: fit-content;
+  width: 90%;
+  border-radius: 50%;
+  /* object-fit: contain; */
   height: 600px;
   max-height: 600px;
-  padding: 0 8px;
-  padding-left: 5px;
 }
 
 .card-right {

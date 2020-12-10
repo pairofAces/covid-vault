@@ -11,10 +11,14 @@ function About() {
             <br></br>
 
             <div className="row">
-                
-                    <div className="card-left">
-                        <img src={newPic} alt="karan" />
+
+                    <div className="pic_container">
+
+                        <div className="card-left">
+                            <img src={newPic} alt="karan" />
+                        </div>
                     </div>
+                
                 
                     <div className="card-right">
                         <h2>What is Covid-Vault?</h2>
